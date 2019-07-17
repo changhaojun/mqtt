@@ -35,6 +35,9 @@ const logoptions = {
 };
 let log = fs.createWriteStream('./mqtt.log', logoptions);
 let logger = new console.Console(log);
+logger.log()
+logger.log(`${moment()}`);
+
 
 
 function mqttpublish(topic, messages) {
